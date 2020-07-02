@@ -1,0 +1,390 @@
+
+<!DOCTYPE html><html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport"
+              content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"><meta name="csrf-param" content="_csrf"><meta name="csrf-token" content="NjM2NGQzZjBmNDk1YjZhYjlkY2Y4ZDNiNWM2ZTBiMDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="><!-- TODO: Meta --><meta name="title" content="Read Young Master Gu, Please Be Gentle - Chapter 856 - Born to Be Beautiful online free - Novel Full"><meta name="description" content="Read Young Master Gu, Please Be Gentle - Chapter 856 - Born to Be Beautiful online free from your Mobile, Table, PC... Novel Updates Daily "><meta name="image" content="https://novelfull.com/uploads/thumbs/young-master-gu-please-be-gentle-67e68eff52-712356d72db51b7e0249b5dd7980f4a8.jpg"><meta name="keywords" content="Young Master Gu, Please Be Gentle - Chapter 856 - Born to Be Beautiful"><title>Read Young Master Gu, Please Be Gentle - Chapter 856 - Born to Be Beautiful online free - Novel Full</title><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'><link rel="shortcut icon" href="/web/images/favicon.ico" type="image/x-icon"><link rel="icon" href="/web/images/favicon.ico" type="image/x-icon"><!--[if lt IE 9]><link rel="stylesheet" href="/web/css/iefix.css"><script src="/web/js/html5shiv.min.js"></script><script src="/web/js/respond.min.js"></script><![endif]--><script type="text/javascript">
+            var ajaxSearchUrl = 'https://novelfull.com/ajax-search';
+            var ajaxNovelRateUrl = 'https://novelfull.com/ajax-novel-rate';
+            var ajaxReportChapterUrl = 'https://novelfull.com/ajax-report-chapter';
+            var ajaxUserSettingsUrl = 'https://novelfull.com/ajax-user-settings';
+            var ajaxChapterOptionUrl = 'https://novelfull.com/ajax-chapter-option';
+        </script><script type="text/javascript" src="/web/js/plugins.js"></script><script type="text/javascript" src="/web/js/common.js"></script><script type="text/javascript" src="/web/js/scripts.js?v=1"></script><!-- TODO: ExtraScript --><script type="text/javascript">
+        $(document).ready(function() {
+            $navBar = $('.toggle-nav-open');
+            $navBar.on('click', function() {
+                var open = $(this).hasClass('active') ? 'close' : 'open';
+                changeStyle('nav-bar', open);
+                saveStyle('nav-bar', open);
+                $('header').toggle();
+                $('.navbar-breadcrumb').toggle();
+            });
+
+            // Key for the chapter navigation
+            $nextChap = $('#next_chap');
+            $prevChap = $('#prev_chap');
+            $(document).keydown(function (e) {
+                var tag = e.target.tagName.toLowerCase();
+                if (tag == 'input' || tag == 'textarea') return;
+
+                var keypress = e.charCode ? e.charCode : e.keyCode;
+                if (keypress == 39 || keypress == 68) {
+                    if (!$nextChap.attr('disabled')) {
+                        window.location = $nextChap.attr('href');
+                    }
+                } else if (keypress == 37 || keypress == 65) {
+                    if (!$prevChap.attr('disabled')) {
+                        window.location = $prevChap.attr('href');
+                    }
+                }
+            });
+
+            // TODO: Theme
+            $container = $('#container');
+            $chapter = $('#chapter');
+            $chapterContent = $('#chapter-content');
+            var chapterContent = $chapterContent.html();
+            $options = $('#options');
+            $options.show();
+            $optionBackground = $('#option-background');
+            $optionFontFamily = $('#option-font-family');
+            $optionFontSize = $('#option-font-size');
+            $optionLineHeight = $('#option-line-height');
+            $optionFluidSwitch = $('input[type=radio][name=fluid-switch]');
+            $optionNoLineBreak = $('input[type=radio][name=onebreak-switch]');
+            $optionBackground.on('change', function() {
+                changeStyle('background', $(this).val());
+                saveStyle('background', $(this).val());
+            });
+            $optionFontFamily.on('change', function() {
+                changeStyle('font-family', $(this).val());
+                saveStyle('font-family', $(this).val());
+            });
+            $optionFontSize.on('change', function() {
+                changeStyle('font-size', $(this).val());
+                saveStyle('font-size', $(this).val());
+            });
+            $optionLineHeight.on('change', function() {
+                changeStyle('line-height', $(this).val());
+                saveStyle('line-height', $(this).val());
+            });
+            $optionFluidSwitch.on('change', function() {
+                changeStyle('fluid-switch', $(this).val());
+                saveStyle('fluid-switch', $(this).val());
+            });
+            $optionNoLineBreak.on('change', function() {
+                changeStyle('onebreak-switch', $(this).val());
+                saveStyle('onebreak-switch', $(this).val());
+            });
+
+            function changeStyle(style, value) {
+                if (!value) return;
+                switch (style) {
+                    case "background":
+                        $container.css('background-color', value);
+                        if (value == '#232323') {
+                            $container.addClass('dark-background');
+                        } else {
+                            $container.removeClass('dark-background');
+                        }
+                        break;
+                    case "font-family":
+                        $chapterContent.css('font-family', value);
+                        break;
+                    case "font-size":
+                        $chapterContent.css('font-size', value);
+                        break;
+                    case "line-height":
+                        $chapterContent.css('line-height', value);
+                        break;
+                    case "nav-bar":
+                        if ( value == 'open' ) {
+                            $('body').addClass('toggleNav');
+                            $('#container').addClass('active');
+                            $navBar.find('.glyphicon').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+                            $navBar.addClass('active');
+                        } else {
+                            $navBar.removeClass('active');
+                            $('#container').removeClass('active');
+                            $navBar.find('.glyphicon').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+                            $('body').removeClass('toggleNav');
+                        }
+                        break;
+                    case "fluid-switch":
+                        if (value == 'yes') {
+                            $chapter.removeClass('container');
+                            $chapter.addClass('container-fluid');
+                        } else {
+                            $chapter.addClass('container');
+                            $chapter.removeClass('container-fluid');
+                        }
+                        break;
+                    case "onebreak-switch":
+                        if (value == 'yes') {
+                            $chapterContent.html(removeLineBreak($chapterContent.html()));
+                        } else {
+                            $chapterContent.html(addLineBreak(chapterContent));
+                        }
+                        break;
+                }
+            }
+
+            function saveStyle(style, value) {
+                // Save to cookies
+                var chapterStyle = getStyle();
+
+                switch (style) {
+                    case "background":
+                        chapterStyle.background = value;
+                        break;
+                    case "font-family":
+                        chapterStyle.fontFamily = value;
+                        break;
+                    case "font-size":
+                        chapterStyle.fontSize = value;
+                        break;
+                    case "line-height":
+                        chapterStyle.lineHeight = value;
+                        break;
+                    case "nav-bar":
+                        chapterStyle.navBar = value;
+                        break;
+                    case "fluid-switch":
+                        chapterStyle.fluidSwitch = value;
+                        break;
+                    case "onebreak-switch":
+                        chapterStyle.onebreakSwitch = value;
+                        break;
+                }
+                var expDate = new Date();
+                expDate.setTime(expDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+                $.cookie("chapter_style", JSON.stringify(chapterStyle), {path: '/', expires: expDate});
+                var settings = {
+                    style: chapterStyle
+                };
+                $.ajax({
+                    method: "POST",
+                    url: ajaxUserSettingsUrl,
+                    data: {
+                        settings: JSON.stringify(settings)
+                    }
+                }).done(function (data) {
+                    console.log(data);
+                });
+            }
+
+            function addLineBreak(content) {
+                var delimiter = '</p>';
+                if (content.indexOf(delimiter) == -1 || content.indexOf('<br/>') > 5 || content.indexOf('<br>') > 5) {
+                    delimiter = '<br/>';
+                    if (content.indexOf(delimiter) == -1) {
+                        delimiter = '<br>';
+                    }
+                }
+                var contentArray = content.split(delimiter);
+                if (contentArray.length == 1) return content;
+                var newContent = '';
+                for (var i in contentArray) {
+                    var contentItem = contentArray[i].trim();
+                    if (contentItem != '<p>') {
+                        newContent += contentItem;
+                        newContent += '<br>';
+                    } 
+                }
+                newContent = newContent.replace(/(<br\s*\/?>){1,}/gi, '<br>');
+                newContent = newContent.replace(/<p><br><br><\/p>/gi, '');
+                return newContent;
+            }
+
+            function removeLineBreak(content) {
+                var newContent = content;
+                newContent = newContent.replace(/(<br\s*\/?>){1,}/gi, '');
+                return newContent;
+            }
+
+            function getStyle() {
+                var chapterStyle = $.cookie("chapter_style");
+                if (chapterStyle) {
+                    chapterStyle = JSON.parse(chapterStyle);
+                } else {
+                    chapterStyle = {};
+                }
+                if (!chapterStyle.background) chapterStyle.background = "#F4F4F4";
+                if (!chapterStyle.fontFamily) chapterStyle.fontFamily = "Arial, sans-serif";
+                if (!chapterStyle.fontSize) chapterStyle.fontSize = "18px";
+                if (!chapterStyle.lineHeight) chapterStyle.lineHeight = "160%";
+                if (!chapterStyle.fluidSwitch) chapterStyle.fluidSwitch = 'no';
+                if (!chapterStyle.onebreakSwitch) chapterStyle.onebreakSwitch = 'no';
+                if (!chapterStyle.navBar) chapterStyle.navBar = 'close';
+                return chapterStyle;
+            }
+
+            var chapterStyle = getStyle();
+            $optionBackground.val(chapterStyle.background);
+            $optionFontFamily.val(chapterStyle.fontFamily);
+            $optionFontSize.val(chapterStyle.fontSize);
+            $optionLineHeight.val(chapterStyle.lineHeight);
+            if (chapterStyle.navBar == 'open') {
+                //$('body').addClass('toggleNav');
+//                $('#container').addClass('active');
+//                $navBar.find('.glyphicon').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+//                $navBar.addClass('active');
+//                $('header').hide();
+//                $('.navbar-breadcrumb').hide();
+            }
+            $optionFluidSwitch.val([chapterStyle.fluidSwitch]);
+            $optionNoLineBreak.val([chapterStyle.onebreakSwitch]);
+            //changeStyle('onebreak-switch', chapterStyle.onebreakSwitch);
+
+            // TODO: Chapter Nav
+            $('.chapter_jump').on('change', function() {
+                window.location = $(this).val();
+            });
+
+            // TODO: Novel history
+            var novel = {
+                id: 499,
+                name: 'Young Master Gu, Please Be Gentle',
+                url: '/young-master-gu-please-be-gentle.html',
+                chapter: {
+                    id: 905415,
+                    name: 'Chapter 856 - Born to Be Beautiful',
+                    url: '/young-master-gu-please-be-gentle/chapter-856-born-to-be-beautiful.html',
+                }
+            };
+
+            jQuery(document).ready(function () {
+                var limit = 10;
+                var novels = $.cookie("novels_history");
+                if (novels) novels = JSON.parse(novels);
+                else novels = [];
+
+                for (var i in novels) {
+                    var nv = novels[i];
+                    if (nv.id == novel.id) {
+                        novels.splice(i, 1);
+                        break;
+                    }
+                }
+
+                if (novels.length == limit) {
+                    novels.splice(-1,1);
+                }
+                novels.unshift(novel);
+
+                var expDate = new Date();
+                expDate.setTime(expDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+                $.cookie("novels_history", JSON.stringify(novels), {path: '/', expires: expDate});
+            });
+
+            $('#chapter_error').on('click', function() {
+                console.log('chapter_error');
+                var reason = prompt("Please describe error", "");
+                if (reason != null) {
+                    $.ajax({
+                        method: "GET",
+                        url: ajaxReportChapterUrl,
+                        data: {
+                            chapter: $(this).data('chapter-id'),
+                            reason: reason
+                        }
+                    }).done(function (data) {
+                        console.log(data);
+                    });
+                    alert('Thanks report');
+                }
+            });
+
+            chapterJump(novel.id, novel.chapter.id, novel.chapter.url);
+        });
+    </script><link rel="stylesheet" href="/web/css/style.css"><link rel="stylesheet" href="/web/css/rateit.css"><link rel="stylesheet" href="/web/css/custom.css?v=1"><link rel="stylesheet" href="/web/css/responsive.css?v=1"></head><body><div id="wrapper"><header class="header" style="display: block"><div class="navbar navbar-default navbar-static-top" role="navigation" id="nav"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Show menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><h5><a class="header-logo" href="/"
+                           title="Read novel online"><img src="/uploads/thumbs/banner-75b2b7a774-16ecfc7149d2c21507bcde60e1c1a073.png"></a></h5></div><div class="navbar-collapse collapse"><ul class="control nav navbar-nav "><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title=""><span class="glyphicon glyphicon-list"></span> Novel List <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/latest-release-novel"
+                                       title="Latest Release">Latest Release</a></li><li><a href="/hot-novel"
+                                       title="Hot Novel">Hot Novel</a></li><li><a href="/completed-novel"
+                                       title="Completed Novel">Completed Novel</a></li><li><a href="/most-popular"
+                                       title="Most Popular">Most Popular</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title=""><span class="glyphicon glyphicon-list"></span> Genre <span class="caret"></span></a><div class="dropdown-menu multi-column"><div class="row"><div class="col-md-4"><ul class="dropdown-menu"><li><a href="/genre/Shounen"
+                                                       title="Shounen">Shounen</a></li><li><a href="/genre/Harem"
+                                                       title="Harem">Harem</a></li><li><a href="/genre/Comedy"
+                                                       title="Comedy">Comedy</a></li><li><a href="/genre/Martial+Arts"
+                                                       title="Martial Arts">Martial Arts</a></li><li><a href="/genre/School+Life"
+                                                       title="School Life">School Life</a></li><li><a href="/genre/Mystery"
+                                                       title="Mystery">Mystery</a></li><li><a href="/genre/Shoujo"
+                                                       title="Shoujo">Shoujo</a></li><li><a href="/genre/Romance"
+                                                       title="Romance">Romance</a></li><li><a href="/genre/Sci-fi"
+                                                       title="Sci-fi">Sci-fi</a></li><li><a href="/genre/Gender+Bender"
+                                                       title="Gender Bender">Gender Bender</a></li><li><a href="/genre/Mature"
+                                                       title="Mature">Mature</a></li><li><a href="/genre/Fantasy"
+                                                       title="Fantasy">Fantasy</a></li></ul></div><div class="col-md-4"><ul class="dropdown-menu"><li><a href="/genre/Horror"
+                                                       title="Horror">Horror</a></li><li><a href="/genre/Drama"
+                                                       title="Drama">Drama</a></li><li><a href="/genre/Tragedy"
+                                                       title="Tragedy">Tragedy</a></li><li><a href="/genre/Supernatural"
+                                                       title="Supernatural">Supernatural</a></li><li><a href="/genre/Ecchi"
+                                                       title="Ecchi">Ecchi</a></li><li><a href="/genre/Xuanhuan"
+                                                       title="Xuanhuan">Xuanhuan</a></li><li><a href="/genre/Adventure"
+                                                       title="Adventure">Adventure</a></li><li><a href="/genre/Action"
+                                                       title="Action">Action</a></li><li><a href="/genre/Psychological"
+                                                       title="Psychological">Psychological</a></li><li><a href="/genre/Xianxia"
+                                                       title="Xianxia">Xianxia</a></li><li><a href="/genre/Wuxia"
+                                                       title="Wuxia">Wuxia</a></li><li><a href="/genre/Historical"
+                                                       title="Historical">Historical</a></li></ul></div><div class="col-md-4"><ul class="dropdown-menu"><li><a href="/genre/Slice+of+Life"
+                                                       title="Slice of Life">Slice of Life</a></li><li><a href="/genre/Seinen"
+                                                       title="Seinen">Seinen</a></li><li><a href="/genre/Lolicon"
+                                                       title="Lolicon">Lolicon</a></li><li><a href="/genre/Adult"
+                                                       title="Adult">Adult</a></li><li><a href="/genre/Josei"
+                                                       title="Josei">Josei</a></li><li><a href="/genre/Sports"
+                                                       title="Sports">Sports</a></li><li><a href="/genre/Smut"
+                                                       title="Smut">Smut</a></li><li><a href="/genre/Mecha"
+                                                       title="Mecha">Mecha</a></li><li><a href="/genre/Yaoi"
+                                                       title="Yaoi">Yaoi</a></li><li><a href="/genre/Shounen+Ai"
+                                                       title="Shounen Ai">Shounen Ai</a></li></ul></div></div></div></li><li class="dropdown" id="options"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Options <span
+                                    class="caret"></span></a><div class="dropdown-menu dropdown-menu-right settings"><form class="form-horizontal"><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label" for="truyen-background">Background</label><div class="col-sm-5 col-md-7"><select class="form-control" id="option-background"><option value="#F4F4F4">Light gray</option><option value="#E9EBEE">Light blue</option><option value="#F4F4E4">Light yellow</option><option value="#EAE4D3">Sepia</option><option value="#D5D8DC">Dark blue</option><option value="#FAFAC8">Dark yellow</option><option value="#EFEFAB">Wood grain</option><option value="#FFF">White</option><option value="#232323">Dark</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label"
+                                               for="font-chu">Font family</label><div class="col-sm-5 col-md-7"><select class="form-control"
+                                                                               id="option-font-family"><option value="'Palatino Linotype', serif">Palatino Linotype</option><option value="Bookerly, serif">Bookerly</option><option value="Minion, serif">Minion</option><option value="'Segoe UI', sans-serif">Segoe UI</option><option value="Roboto, sans-serif">Roboto</option><option value="'Roboto Condensed', sans-serif">Roboto Condensed</option><option value="'Patrick Hand', sans-serif">Patrick Hand</option><option value="'Noticia Text', sans-serif">Noticia Text</option><option value="'Times New Roman', serif">Times New Roman</option><option value="Verdana, sans-serif">Verdana</option><option value="Tahoma, sans-serif">Tahoma</option><option value="Arial, sans-serif">Arial</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label" for="size-chu">Font size</label><div class="col-sm-5 col-md-7"><select class="form-control" id="option-font-size"><option value="16px">16</option><option value="18px">18</option><option value="20px">20</option><option value="22px">22</option><option value="24px">24</option><option value="26px">26</option><option value="28px">28</option><option value="30px">30</option><option value="32px">32</option><option value="34px">34</option><option value="36px">36</option><option value="38px">38</option><option value="40px">40</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label" for="line-height">Line
+                                            height</label><div class="col-sm-5 col-md-7"><select class="form-control" id="option-line-height"><option value="100%">100%</option><option value="120%">120%</option><option value="140%">140%</option><option value="160%">160%</option><option value="180%">180%</option><option value="200%">200%</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label">Full frame</label><div class="col-sm-5 col-md-7"><label class="radio-inline" for="fluid-yes"><input type="radio" name="fluid-switch" id="fluid-yes" value="yes"> Yes</label><label class="radio-inline" for="fluid-no"><input type="radio" name="fluid-switch" id="fluid-no" value="no"
+                                                       checked=""> No</label></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label">No line break</label><div class="col-sm-5 col-md-7"><label class="radio-inline" for="onebreak-yes"><input type="radio" name="onebreak-switch" id="onebreak-yes"
+                                                       value="yes"> Yes</label><label class="radio-inline" for="onebreak-no"><input type="radio" name="onebreak-switch" id="onebreak-no" value="no"
+                                                       checked=""> No</label></div></div></form></div></li></ul><form class="navbar-form navbar-right"
+                          action="/search"><div class="input-group search-holder"><input class="form-control" id="search-input" type="search"
+                                   name="keyword" placeholder="Search..."
+                                   value=""><div class="input-group-btn"><button class="btn btn-default" type="submit"><span
+                                        class="glyphicon glyphicon-search"></span></button></div></div><div class="list-group list-search-res hide"></div></form><div id="login-status" class="hide"></div></div><!--/.nav-collapse --></div></div></header><main id="container" class=" "
+          style="background-color: #F4F4F4"><div class="navbar-breadcrumb" style="display: block"><div class="container breadcrumb-container"><ol class="breadcrumb"><li><a href=""><span class="glyphicon glyphicon-home"></span></a><a href="/" title="Read novel online"><span>Novel</span></a></li><li><h1><a href="/young-master-gu-please-be-gentle.html" title="Young Master Gu, Please Be Gentle"><span>Young Master Gu, Please Be Gentle</span></a></h1></li><li class="active"><a href="/young-master-gu-please-be-gentle/chapter-856-born-to-be-beautiful.html"
+                       title="Chapter 856 - Born to Be Beautiful"><span>Chapter 856 - Born to Be Beautiful</span></a></li></ol></div></div><div id="chapter" class="chapter container"><div class="row"><div class="col-xs-12"><a class="truyen-title" href="/young-master-gu-please-be-gentle.html" title="Young Master Gu, Please Be Gentle">Young Master Gu, Please Be Gentle</a><h2><a class="chapter-title" href="/young-master-gu-please-be-gentle/chapter-856-born-to-be-beautiful.html" title="Chapter 856 - Born to Be Beautiful"><span class="chapter-text">Chapter 856 - Born to Be Beautiful<span></a></h2><hr class="chapter-start"><button type="button" class="btn btn-responsive btn-success toggle-nav-open "><span class="glyphicon glyphicon-menu-up"></span></button><div class="chapter-nav" id="chapter-nav-top"><div class="btn-group"><a class="btn btn-success" href="/young-master-gu-please-be-gentle/chapter-855-sorry-but-i-cant-marry-you.html"
+           title="Chapter 855 - Sorry, But I Can't Marry You"
+           id="prev_chap"><span class="glyphicon glyphicon-chevron-left"></span><span class="hidden-xs">Prev Chapter</span></a><button type="button" class="btn btn-success chapter_jump"><span class="glyphicon glyphicon-list-alt"></span></button><a class="btn btn-success" disabled id="next_chap"><span class="hidden-xs">Next Chapter</span><span class="glyphicon glyphicon-chevron-right"></span></a></div></div><hr class="chapter-end"><div id="chapter-content" class="chapter-c" style="font-family: Arial, sans-serif, serif; font-size: 18px; line-height: 160%;"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- full thich ung --><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="2009706278"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><p></p><p><h3>Chapter 856: Born to Be Beautiful</h3></p><p>Jun Xiqing looked up at Lin Xuanji. Uncle had given a lifetime of his love to her.</p><p>Even in the last lap of Uncle&#8217;s life journey, he could not bear to force her against her wishes and would only accede to her requests.</p><p>&#8220;Uncle, actually you can be a little more selfish. You can get Madam Xuanji to be your wife.&#8221;</p><div><p></div></p><p>Jun Mosheng shook his head. &#8220;She won&#8217;t be happy this way.&#8221;</p><p>With that, Jun Mosheng caressed Jun Xiqing&#8217;s hair affectionately. &#8220;Qing&#8217;er, you&#8217;ve been with me since you were young and I&#8217;ve been raising and nurturing you. It&#8217;s a pity that you&#8217;re a female, if not I could handover Country Z to you.&#8221;</p><p>Jun Xiqing was a woman dressed in a man&#8217;s clothing.</p><p>&#8220;Uncle.&#8221; Jun Xiqing fluttered her pretty lashes. &#8220;Who said that women are incomparable to men? I&#8217;ll help you to protect Country Z in the future!&#8221;</p><div><p></div></p><p>Many years later, Jun Xiqing became the first queen in history. She honored her promise and helped her Uncle protect Country Z.</p><p>…</p><p>At the luxurious private room of the six-star grand hotel, everyone sat down and began to eat their dinner.</p><p>Jun Mosheng and Lin Xuanji were seated together. He said gently, &#8220;Xuanji, I&#8217;ll get a waiter to bring a glass of warm water for you.&#8221;</p><div><!-- QC noi dung 2 --><p></div></p><p>The royal guard behind him followed his instructions.</p><p>But just then, the door to the private room was pushed open. A tall and handsome figure suddenly appeared and Lu Jinwen stood by the door.</p><p>&#8220;President, why are you here?&#8221; The hotel manager hurriedly ran over.</p><p>President?</p><p>This was a subsidiary hotel under the Lu Corporation. Now that they were in Capital, they could not avoid properties under the Lu Corporation.</p><p>Lu Jinwen entered the room holding an empty glass in his hand. He placed the glass beside Lin Xuanji&#8217;s hand. The hotel manager held a pitcher and poured water for Lin Xuanji.</p><div><p></div></p><p>Lu Jinwen placed one hand on Lin Xuanji&#8217;s chair and stuck the other hand into his trousers pocket. &#8220;Xuanji, why didn&#8217;t you tell me that you were bringing President Jun to my hotel for a meal? I would have asked the hotel&#8217;s private chef to specially prepare a few dishes for both of you.&#8221;</p><p>Lin Xuanji was dumbfounded.</p><p>Jun Mosheng looked at Lu Jinwen. &#8220;President Lu, it&#8217;s been a long time since we last met. I wouldn&#8217;t want to bother you this time. We will arrange again next time.&#8221;</p><p>Lu Jinwen smiled. &#8220;President Jun, it&#8217;s not troublesome at all. Someone come and add another chair here.&#8221;</p><p>The waiter promptly brought a chair over. The hotel manager asked cautiously, &#8220;President, where would you like to sit?&#8221;</p><p>Lin Xuanji pointed to the middle space between Jun Mosheng and Lin Xuanji. &#8220;Here.&#8221;</p><p>&#8220;Yes, President.&#8221;</p><p>A chair was placed in between Jun Mosheng and Lin Xuanji and Lu Jinwen sat down.</p><div style="border-width:1px"><p></div></p><p>Everyone went silent.</p><p>Lu Jinwen did not pick up the chopsticks to eat. Instead, he leaned indolently against the chair with one arm placed around Lin Xuanji&#8217;s chair, and he glanced sideways at Jun Mosheng. He smiled and said, &#8220;President Jun, you&#8217;ve come at the right moment. Xuanji and I are getting married soon. President Jun, you&#8217;ll have to come and attend our wedding on that day.&#8221;</p><p>Lin Xuanji&#8217;s long lashes quivered and she promptly looked at Lin Xuanji. &#8220;How come I wasn&#8217;t aware that we&#8217;re getting married?&#8221;</p><p>Lu Jinwen glanced at Lin Xuanji and he tousled her silky hair. His voice was laced with adoration. &#8220;Darling, be good. There are outsiders here so don&#8217;t kick up a fuss.&#8221;</p><p>Don&#8217;t kick up a fuss…</p><p>&#8220;…&#8221;</p><p>Lin Xuanji stood up swiftly. &#8220;I&#8217;m going to the washroom.&#8221;</p><div class="ads ads-holder ads-middle text-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="8264086020"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><p>…</p><p>Along the corridor.</p><p>Tang Chenyi&#8217;s cell phone rang. He had come out to receive the call.</p><p>&#8220;Prince.&#8221; Just then, a shadow emerged. He was Tang Chenyi&#8217;s trustworthy assistant, Fan Men.</p><p>The dim light in the corridor shone on Tang Chenyi&#8217;s handsome face and his countenance could not clearly be seen. He glanced at Fan Men.</p><p>Fan Men respectfully approached Tang Chenyi and whispered a few sentences into his ear.</p><div><p></div></p><p>Ha.</p><p>At this moment, he heard soft laughter.</p><p>Fan Men promptly raised his head to see a delicate figure ahead. Jun Xiqing was lazily leaning against the wall in the corridor, with one hand stuck into her trousers pocket and the other hand was holding onto her cap, which concealed half of her face. Her sparkling dark eyes landed on Tang Chenyi&#8217;s handsome face.</p><p>Who was this?</p><p>Murderous intent flashed across Fan Men&#8217;s eyes and he wanted to go forward.</p><p>But just then, a hand restrained him. Tang Chenyi glanced at Fan Men. Lowering his head, Fan Men lowered his head and retreated a few steps.</p><p>Tang Chenyi looked ahead at Jun Xiqing. &#8220;What are you laughing at?&#8221;</p><p>Jun Xiqing extended her long legs, crossed one leg over the other and started shaking her legs coolly. &#8220;West Duke, just now your assistant was telling you that the two dukes of the South and the East have already sent someone to kill you. Actually if Madam Xuanji marries President Jun, these two dukes will not dare lay a finger on you.</p><p>&#8220;Since historical times, the monarch does not care about trivial things like marrying off their sisters or mothers. This is merely a political strategy to help you realize your ambitions and wishes for revenge.&#8221;</p><p>Jun Xiqing was here to persuade. She hoped that Madam Xuanji would marry her Uncle. Upon hearing these words, Tang Chenyi arched his brows. He walked ahead and stood in front of Jun Xiqing.</p><p>He extended a large hand and placed it beside Jun Xiqing&#8217;s head on the wall. Tang Chenyi hunched his body and trapped her between the wall and his chest.</p><p>Jun Xiqing promptly retracted her legs. Even though she was dressed in men&#8217;s clothes, she was still soft and demure beneath her confident appearance.</p><div></div><p>Now she was being trapped in Tang Chenyi&#8217;s embrace. Tang Chenyi was almost 1.85 meters in height and she was only 1.62 meters. Her head barely reached his chest.</p><p>His handsome face was in close proximity to hers. He was as handsome as what people proclaimed, and his features looked like they had been exquisitely drawn by an artist.</p><p>She had never been so intimate with a man before in her whole life.</p><p>Having grown up under Jun Mosheng&#8217;s care at Orchid Park, and there were practically no other men at where she was residing. She fluttered her lashes and looked at him with bright eyes. &#8220;You… what do you want?&#8221;</p><p>Tang Chenyi gradually curved his thin lips and said in a deep voice, &#8220;You&#8217;re wrong. Just now, Fan Men was telling me that the West Palace has sent over a beauty. This beauty was born to be beautiful and she&#8217;s been sent over to guide me on… the matters between a man and a woman.&#8221;</p><p>Matters between… a man and a woman?</p><p>&#8220;What matters could there be between men and women?&#8221; Jun Xiqing expressed curiosity.</p><p>Tang Chenyi looked down at the little face. He had never seen a boy&#8217;s face so tiny before. It was so small that it was not even the size of a palm.</p><p>This boy was not handsome at all. His parents, sister and even brother-in-law were extremely good-looking. In comparison, this boy&#8217;s face was very normal-looking, and was only pleasant-looking at the very most.</p><p>She was holding her hat now and shielding the lower part of her face, revealing her exquisite forehead, a pair of willowy eyebrows and her luscious lashes. He could see her lashes strand by strand, as if they were like little fans…</p><div><!-- QC noi dung 2 --></div><div  align="left">
+If you find any errors ( broken links, non-standard content, etc.. ), Please let us know < report chapter > so we can fix it as soon as possible. </div></div><hr class="chapter-end"><div class="chapter-nav" id="chapter-nav-top"><div class="btn-group"><a class="btn btn-success" href="/young-master-gu-please-be-gentle/chapter-855-sorry-but-i-cant-marry-you.html"
+           title="Chapter 855 - Sorry, But I Can't Marry You"
+           id="prev_chap"><span class="glyphicon glyphicon-chevron-left"></span><span class="hidden-xs">Prev Chapter</span></a><button type="button" class="btn btn-success chapter_jump"><span class="glyphicon glyphicon-list-alt"></span></button><a class="btn btn-success" disabled id="next_chap"><span class="hidden-xs">Next Chapter</span><span class="glyphicon glyphicon-chevron-right"></span></a></div></div><div class="text-center"><button type="button" class="btn btn-warning" id="chapter_error" data-chapter-id="905415"><span class="glyphicon glyphicon-exclamation-sign"></span> Report chapter
+    </button><!--    <button type="button" class="btn btn-info" id="chapter_comment">--><!--        <span class="glyphicon glyphicon-comment"></span> Comment--><!--    </button>--></div><div class="bg-info text-center visible-md visible-lg box-notice">
+    Tip: You can use left, right, A and D keyboard keys to browse between chapters.
+</div><div class="col-xs-12"></div><div align="center" style="padding-top:15px"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- full thich ung --><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="2009706278"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div></main><footer class="footer"><div class="container"><div class="hidden-xs col-sm-5"><p>
+	&copy; Copyright NovelFull.Com. All Rights Reserved.</p></div><ul class="col-xs-12 col-sm-7 list-unstyled"><li class="text-right pull-right"><a href="/contact" title="Contact">Contact</a> -
+                    <a href="/tos" title="ToS">ToS</a> -
+                    <a href="/sitemap.xml" target="_blank">Sitemap</a><a
+                        class="backtop" href="#" rel="nofollow" title=""><span
+                            class="glyphicon glyphicon-upload"></span></a></li></ul></div></footer></div></body><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-101484867-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-101484867-2');
+</script></html>
