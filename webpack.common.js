@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   entry: './src/handler.ts',
@@ -7,16 +7,25 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'handler',
     libraryTarget: 'umd',
-    libraryExport: 'export',
+    libraryExport: '',
   },
   resolve: {
     extensions: ['.ts', '.js'],
   },
   module: {
-    rules: [{test: /\.ts$/, use: ['ts-loader']}],
+    rules: [
+      {test: /\.ts$/, use: ['ts-loader']},
+      // {test: /\.node$/, use: ['node-loader']},
+    ],
   },
   target: 'node',
-  externals: {
-    canvas: 'commonjs canvas',
-  },
+  externals: [
+    function(context, request, callback) {
+      if (request === 'canvas') {
+        return callback(null, 'commonjs ./canvas');
+      } else {
+        return callback();
+      }
+    },
+  ],
 };
